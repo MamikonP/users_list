@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../../presentation/routes.dart';
-import '../constants.dart';
+import '../constants/constants.dart';
 
 abstract class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings,

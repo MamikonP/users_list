@@ -7,8 +7,22 @@ sealed class UserEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class AddUserEvent extends UserEvent {}
+class GetUsersEvent extends UserEvent {}
 
-class EditUserEvent extends UserEvent {}
+class AddUserEvent extends UserEvent {
+  const AddUserEvent({required this.entity});
 
-class DeleteUserEvent extends UserEvent {}
+  final UserEntity entity;
+}
+
+class EditUserEvent extends UserEvent {
+  const EditUserEvent({required this.entity});
+
+  final UserEntity entity;
+}
+
+class DeleteUserEvent extends UserEvent {
+  const DeleteUserEvent({required this.id});
+
+  final String id;
+}

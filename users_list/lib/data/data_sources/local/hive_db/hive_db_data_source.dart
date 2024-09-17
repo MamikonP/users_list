@@ -8,4 +8,5 @@ abstract interface class HiveDbDataSource {
   T? get<T>(Box<T> db, Object key);
   Future<void> delete<T>(Box<T> db, String dbName);
   Future<void> clear<T>(Box<T> db);
+  bool containsKey<T>(Box<T> db, Object key);
 }

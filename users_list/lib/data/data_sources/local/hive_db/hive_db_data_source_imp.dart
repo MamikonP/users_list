@@ -24,4 +24,7 @@ class HiveDbDataSourceImp implements HiveDbDataSource {
 
   @override
   Future<void> delete<T>(Box<T> db, String dbName) async => db.delete(dbName);
+
+  @override
+  bool containsKey<T>(Box<T> db, Object key) => db.containsKey(key);
 }
