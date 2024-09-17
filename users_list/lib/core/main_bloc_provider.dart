@@ -14,7 +14,7 @@ class MainBlocProvider extends StatelessWidget {
         BlocProvider<UserBloc>(
           create: (BuildContext context) => UserBloc(
             userRepository: RepositoryProvider.of<UserRepository>(context),
-          ),
+          )..add(GetUsersEvent()),
         ),
       ], child: child);
 }

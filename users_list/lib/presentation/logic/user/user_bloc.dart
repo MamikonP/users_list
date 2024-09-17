@@ -65,10 +65,9 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       await userRepository.editUser(event.entity);
       emit(
         UserLoaded(
-          List.from(state.users)
-            ..updateWhere(
-                test: (element) => element.id == event.entity.id,
-                updateTo: event.entity),
+          List<UserEntity>.from(state.users).updateWhere(
+              test: (element) => element.id == event.entity.id,
+              updateTo: event.entity),
         ),
       );
     } catch (e) {

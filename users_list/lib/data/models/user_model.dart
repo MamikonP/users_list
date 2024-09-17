@@ -31,6 +31,6 @@ class UserModel extends UserEntity {
         firstname: firstname,
         lastname: lastname,
         email: email,
-        phoneNumber: firstname,
+        phoneNumber: phoneNumber,
       );
 }

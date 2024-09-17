@@ -11,8 +11,6 @@ abstract class AppRouter {
     switch (settings.name) {
       case kUserListRoute:
         return UserListRoute<dynamic>();
-      case kUserDetailRoute:
-        return UserDetailRoute<dynamic>();
       default:
         throw Exception('Route not found!');
     }
